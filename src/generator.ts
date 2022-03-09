@@ -1,3 +1,4 @@
+import { createWriteStream } from "fs";
 import PdfPrinter from "pdfmake";
 
 const fonts = {
@@ -10,13 +11,19 @@ const fonts = {
   },
 };
 
-export const printer = new PdfPrinter(fonts);
+const printer = new PdfPrinter(fonts);
 
 type Args = Parameters<typeof printer.createPdfKitDocument>;
 
 export type DocDefinition = Args[0];
 export type Options = Args[1];
 
-// type OutputPath = string;
+type OutputPath = string;
 
-// const generate =
+export const generate = (path: OutputPath, ...args: Args) => {
+  const [docDefinition, options] = args;
+
+  const doc = printer.createPdfKitDocument(docDefinition, options);
+  doc.pipe(createWriteStream(path));
+  doc.end();
+};

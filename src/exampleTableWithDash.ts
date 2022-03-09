@@ -1,5 +1,4 @@
-import { createWriteStream } from "fs";
-import { printer } from "./generator";
+import { generate } from "./generator";
 import type { DocDefinition, Options } from "./generator";
 
 const docDefinition: DocDefinition = {
@@ -24,8 +23,4 @@ const docDefinition: DocDefinition = {
 
 const options: Options = {};
 
-const doc = printer.createPdfKitDocument(docDefinition, options);
-
-doc.pipe(createWriteStream("output/exampleTableWithDash.pdf"));
-
-doc.end();
+generate("output/exampleTableWithDash.pdf", docDefinition, options);
