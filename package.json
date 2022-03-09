@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "pdf": "ts-node ./index.ts"
+    "pdf:table": "ts-node ./src/exampleTableWithDash.ts"
   },
   "dependencies": {
-    "pdfmake": "^0.2.4"
+    "pdfmake": "^0.2.4",
+    "roboto-font": "^0.1.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",
