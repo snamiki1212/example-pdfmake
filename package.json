@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "pdf:table": "ts-node ./src/exampleTableWithDash.ts; open ./output/exampleTableWithDash.pdf"
+    "pdf:table": "ts-node ./src/exampleTable.ts; open ./output/exampleTable.pdf"
   },
   "dependencies": {
     "pdfmake": "^0.2.4",

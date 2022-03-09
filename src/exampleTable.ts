@@ -66,4 +66,4 @@ const docDefinition: DocDefinition = {
 
 const options: Options = {};
 
-generate("output/exampleTableWithDash.pdf", docDefinition, options);
+generate("output/exampleTable.pdf", docDefinition, options);
