@@ -4,18 +4,61 @@ import type { DocDefinition, Options } from "./generator";
 const docDefinition: DocDefinition = {
   content: [
     {
-      layout: "lightHorizontalLines", // optional
       table: {
-        // headers are automatically repeated if the table spans over multiple pages
-        // you can declare how many rows should be treated as headers
         headerRows: 1,
-        widths: ["*", "auto", 100, "*"],
-
         body: [
-          ["First", "Second", "Third", "The last one"],
-          ["Value 1", "Value 2", "Value 3", "Value 4"],
-          [{ text: "Bold value", bold: true }, "Val 2", "Val 3", "Val 4"],
+          ["", "Name", "Username", "Password"],
+          [
+            "1.",
+            { text: "Sample value 1", style: { color: "#4F4F4F" } },
+            "Sample value 2",
+            "Sample value 3",
+          ],
+          ["2.", "Sample value 1", "Sample value 2", "Sample value 3"],
+          ["3.", "Sample value 1", "Sample value 2", "Sample value 3"],
+          ["4.", "Sample value 1", "Sample value 2", "Sample value 3"],
+          ["5.", "Sample value 1", "Sample value 2", "Sample value 3"],
         ],
+      },
+      layout: {
+        /**
+         * Vertical Line
+         */
+        vLineWidth(_rowIndex, _node, _columnIndex) {
+          return 0;
+        },
+
+        /**
+         * Horizontal Line
+         */
+        hLineStyle(rowIndex, _node, _columnIndex) {
+          const isBoundary = rowIndex === 1;
+          if (isBoundary) return { dash: { length: 10, space: 4 } };
+          return undefined;
+        },
+        hLineColor(rowIndex, _node, _columnIndex) {
+          const isBoundary = rowIndex === 1;
+          if (isBoundary) return "#A7A7A7"; // TODO: import constant val
+          return "#D4D4D4"; // TODO: import constant val
+        },
+        hLineWidth(rowIndex, _node, _columnIndex) {
+          const isTop = rowIndex === 0;
+          if (isTop) return 0;
+          return 1;
+        },
+
+        /**
+         * Cells
+         */
+        paddingBottom(_rowIndex, _node, _columnIndex) {
+          return 20;
+        },
+        paddingTop(_rowIndex, _node, _columnIndex) {
+          return 20;
+        },
+        paddingRight(_rowIndex, _node, _columnIndex) {
+          return 20;
+        },
       },
     },
   ],
