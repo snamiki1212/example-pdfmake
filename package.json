@@ -2,7 +2,8 @@
   "scripts": {
     "pdf:table": "ts-node ./src/exampleTable.ts; open ./output/exampleTable.pdf",
     "pdf:round": "ts-node ./src/exampleRound.ts; open ./output/exampleRound.pdf",
-    "pdf:box": "ts-node ./src/exampleBox.ts; open ./output/exampleBox.pdf"
+    "pdf:box": "ts-node ./src/exampleBox.ts; open ./output/exampleBox.pdf",
+    "pdf:multiPages": "ts-node ./src/exampleMultiPages.ts; open ./output/exampleMultiPages.pdf"
   },
   "dependencies": {
     "pdfmake": "^0.2.4",
