@@ -9,6 +9,13 @@ const fonts = {
     bolditalics:
       "node_modules/roboto-font/fonts/Roboto/roboto-bolditalic-webfont.ttf",
   },
+
+  Livvic: {
+    normal: "fonts/Livvic/Livvic-Medium.ttf",
+    bold: "fonts/Livvic/Livvic-Bold.ttf",
+    italics: "fonts/Livvic/Livvic-Medium.ttf",
+    bolditalics: "fonts/Livvic/Livvic-Medium.ttf",
+  },
 };
 
 const printer = new PdfPrinter(fonts);
