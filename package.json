@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "pdf:table": "ts-node ./src/exampleTable.ts; open ./output/exampleTable.pdf"
+    "pdf:table": "ts-node ./src/exampleTable.ts; open ./output/exampleTable.pdf",
+    "pdf:box": "ts-node ./src/exampleBox.ts; open ./output/exampleBox.pdf"
   },
   "dependencies": {
     "pdfmake": "^0.2.4",
