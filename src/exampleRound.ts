@@ -62,4 +62,4 @@ const docDefinition: DocDefinition = {
 
 const options: Options = {};
 
-generate("output/exampleBox.pdf", docDefinition, options);
+generate("output/exampleRound.pdf", docDefinition, options);

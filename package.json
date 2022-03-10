@@ -1,7 +1,8 @@
 {
   "scripts": {
     "pdf:table": "ts-node ./src/exampleTable.ts; open ./output/exampleTable.pdf",
-    "pdf:box": "ts-node ./src/exampleBox.ts; open ./output/exampleBox.pdf"
+    "pdf:round": "ts-node ./src/exampleRound.ts; open ./output/exampleRound.pdf",
+    "pdf:solidBox": "ts-node ./src/exampleRoundBox.ts; open ./output/exampleRoundBox.pdf"
   },
   "dependencies": {
     "pdfmake": "^0.2.4",
