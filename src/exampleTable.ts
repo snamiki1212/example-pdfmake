@@ -5,12 +5,16 @@ const docDefinition: DocDefinition = {
   content: [
     {
       table: {
+        widths: ["5%", "40%", "*", "*"],
         headerRows: 1,
         body: [
           ["", "Name", "Username", "Password"],
           [
             "1.",
-            { text: "Sample value 1", style: { color: "#4F4F4F" } },
+            {
+              text: "Sample value 1",
+              style: { color: "#4F4F4F" },
+            },
             "Sample value 2",
             "Sample value 3",
           ],
