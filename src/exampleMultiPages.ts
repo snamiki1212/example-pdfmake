@@ -3,7 +3,8 @@ import type { DocDefinition, Options } from "./generator";
 
 const docDefinition: DocDefinition = {
   content: [
-    "header",
+    // large table
+    "First line",
     {
       table: {
         body: [
@@ -18,6 +19,7 @@ const docDefinition: DocDefinition = {
     { text: "", pageBreak: "after" },
     "Bye Bye",
   ],
+  header: [{ text: "This is header" }],
 };
 
 const options: Options = {};
