@@ -11,7 +11,17 @@ const docDefinition: DocDefinition = {
         body: [
           [
             {
-              text: "This is first section.\nThis is second line.\nTHis is third line.",
+              stack: [
+                {
+                  text: "This is first section.",
+                },
+                {
+                  text: "This is second line.",
+                },
+                {
+                  text: "THis is third line.",
+                },
+              ],
             },
           ],
         ],
